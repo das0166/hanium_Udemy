@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.연산자확인</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a = 10;
+    var b = 5;
+    var c = 3;
+    var d = '10';
+    // d는 문자
+
+    console.log(a+b);
+    console.log(a-b);
+    console.log(a/b);
+    console.log(a*b);
+    console.log(a%c);
+
+    console.log(a++);
+    // a가 출력된 뒤 a에 1을 더함
+    console.log(a);
+    // 위에서 1이 더해진 상태로 저장되어 출력됨
+    console.log(++a);
+    // a가 출력되기 전 1이 더해짐
+    console.log(a--);
+    // 12
+    console.log(a);
+    // 11
+    console.log(--a);
+    // 10
+
+    // ==과 === 비교연산자
+    console.log(a == 10);
+    // true
+    console.log(a == 3);
+    // false
+
+    // 변수 자료형 ===, 왼쪽과 오른쪽의 값과 자료형까지 같아야 true
+    console.log(a == d);
+    // 숫자 10과 문자 10이 같은지?
+    // ==은 자료형까지 비교하지 않고 값만 비교함
+    // 그러므로 true
+    console.log(a === d);
+    // 숫자 10과 문자 10
+    // 값은 같지만 자료형이 다르기때문에 false
+    console.log(d === '10');
+    // 문자 10과 문자 10이기때문에 true
+
+    // !=과 !== 비교연산자
+    // 자바스크립트에서 true와 false가 나오는 경우 앞에 !를 붙이게 되면 true는 false로, false는 true로 나옴
+    // 즉, !를 붙이게 되면 반대의 의미를 가지게 됨
+    console.warn(a != 10);
+    // a와 10은 같지만, !때문에 결과는 false
+    console.warn(a != '10');
+    // !=은 자료형까지 확인하지 않기 때문에 true로 나와야하지만, !때문에 결과는 false
+    console.warn(a !== '10');
+    // != -> == 반대의 의미
+    // !== -> === 반대의 의미
+    // !== 또한 값과 자료형이 같으면 false
+    // 자료형이나 값 중 하나가 다르면 true
+    // 숫자 10과 문자형 10은 값이 같지만 문자형이 다르기때문에 결과 값은 true
+
+    // <, >, <=, >= 크기 비교 연산자
+    console.log(a > 5);
+    // true
+    console.log(a < 5);
+    // false
+    console.log(a >= 10);
+    // true
+    console.log(a <= 10);
+    // true
+</script>
+</html>
