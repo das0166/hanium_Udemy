@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    for(var i = 1; i<= 10; i++){
+        console.log(i+'번째 반복입니다.');
+        /*
+        i = 1
+        i++ -> 1만큼 더해줌
+        i = 2
+        2번째 반복입니다.
+        i = 3
+        3번째 반복입니다.
+        i = 11
+        반복을 끝내고 다음으로 넘어감
+        */
+    }
+    console.warn('i의 현재 값은? ' + i);
+    // 초기값 선언, 언제까지 반복시킬것인지 조건, 초기값을 얼마나 변경시킬 것인지
+    
+    for(var i = 1; i < 10; i++){
+        console.log(i+'번째 반복입니다.');
+        if(i == 5){
+            console.warn('조건에 도달했으므로 반복문을 끝냅니다.');
+            break;
+        }
+    }
+</script>
+</html>
