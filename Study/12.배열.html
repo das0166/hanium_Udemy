@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 배열을 선언하는 방법
+    var arr1 = new Array();
+    // 배열에 아무런 값도 없고, 길이도 정해지지 않음
+    var arr2 = new Array(3);
+    // 배열에 아무런 값도 없지만, 길이는 3으로 정해짐
+    var arr3 = [];
+    // 배열에 아무런 값도 없고, 길이도 정해지지 않음
+    var arr4 = [1, 2, 3, 4];
+    // 배열에 값을 넣어주고, 그 값만큼의 길이를 설정함
+
+    var arr5 = [1, '문자열', true, [1,2,3], {name: '객체'}, null, undefined];
+
+    var array = ['아이폰', '갤럭시', '아이패드'];
+
+    console.log(array);
+    console.log(array[0]);
+    console.log(array[1]);
+    console.log(array[2]);
+    
+    console.log(array.length);
+
+    for(i = 0; i<array.length; i++) {
+        console.log('배열의 ' + i + '번째의 값은? ' + array[i]);
+    }
+
+</script>
+</html>
