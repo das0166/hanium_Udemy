@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    배열
+    - 비어있는 상자에 작은 상자(값)을 넣어줄 수 있음
+    - 인덱스라는 값을 이용해서 상자들을 구분
+
+    객체
+    - 무언가를 코드상으로 나타내는 방법
+    - 비어있는 상자에 작은 상자(값)을 넣어줄 수 있음
+    - 인덱스가 아닌 값과 따라다니는 '키'라는 특정한 값을 이용해서 상자들을 구분함
+    */
+   var stock = {
+        name : '애플',
+        price : 143.42,
+        products : ['아이폰', '아이패드', '에어팟'],
+        from : '나스닥',
+        status : true
+   };
+   
+   // 값을 출력하는 방법
+   // 1.
+   console.log(stock);
+
+   // 2. 객체명 ['속성값(키값)']
+   console.log(stock['name']);
+   console.log(stock['price']);
+   console.log(stock['products']);
+   console.log(stock['products'][1]);
+   console.log(stock['from']);
+   console.log(stock['status']);
+
+   // 3. 객체명.속성명(키값)
+   console.log(stock.name);
+   console.log(stock.price);
+   console.log(stock.products);
+   console.log(stock.products[0]);
+   console.log(stock.from);
+   console.log(stock.status);
+
+   /*
+    4. for in
+    for in 반복문을 퉁해 객체 내부의 값들을 불러올 수 있음
+    배열 반복문과는 다르게 item 위치에 객체의 키값(속성명)이 들어옴
+   */
+  for(item in stock){
+    console.log(item + '의 값은? ' + stock[item]);
+  }
+  
+  /*
+   5. with
+   객체의 값을 가져올 때 객체명 생략 가능
+   with의 중괄호로 묶여있는 영역에서만 사용 가능
+  */
+  with(stock){
+    console.warn(name);
+    console.warn(price);
+    console.warn(products);
+    console.warn(from);
+    console.warn(status);
+  }
+
+  // 객체 안에 해당 속성명이 존재하는지 확인하는 키워드
+  // 찾는 키값이 객체 안에 존재할 때는 true, 존재하지 않을 때는 false
+  console.log('name' in stock);
+  console.log('option' in stock);
+  
+</script>
+</html>
