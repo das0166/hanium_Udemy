@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function test1() {
+        console.log('일반적인 ES5 함수 선언법');
+    }
+
+    test1();
+
+    var test2 = function() {
+        console.log('변수 안에도 함수를 넣을 수 있다.');
+    }
+
+    test2();
+
+    /* 
+    화살표 함수
+    기존 함수에서 선언할 때 function () {} 으로 작성하던 내용을  () => {}로 줄여서 사용 가능
+    매개변수를 받아서 처리하거나, 값을 리턴시키는 등 함수의 기능을 전부 사용할 수 있음
+    */
+    var test3 = (num1, num2) => {
+        console.log('화살표 함수 입니다.');
+        return num1 + num2;
+    }
+    console.log(test3(1,2));
+
+    // 간단한 수식만 가능!
+    var test4 = (num1, num2) => num1 + num2;
+    console.log(test4(6,3));
+    </script>
+</html>
