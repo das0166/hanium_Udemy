@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var num1 = 1;
+    let num2 = 2;
+    const num3 = 3;
+
+    console.log(num1);
+    console.log(num2);
+    console.log(num3);
+
+    num1 = 4;
+    num2 = 5;
+    /*
+    num3 = 6;
+    num3에서 오류 발생하는 이유
+    num3은 const로 선언함
+    const는 최초 선언 후 값 변경 불가
+    */
+
+    // var과 let의 차이
+    var varTest = 'var로 선언할 수 있다.';
+    console.warn(varTest);
+    /*
+    console.warn(varTest);
+    var varTest = 'var로 선언할 수 있다.'; 로 작성해도 오류가 아닌 undefined가 출력되는 이유
+    var의 경우, script가 실행될때 var varTest;로 선언이 먼저 됨(처음에 값까지 선언되는 것이 아님)
+    나머지 script들이 실행되다가 31번째줄에 왔을때 값을 저장해주고 출력을 해주는 형식이기때문에
+    위의 경우처럼 순서가 바껴도 오류가 뜨지 않음.
+    */
+    
+    let letTest = 'let으로 선언할 수 있다.';
+    console.warn(letTest);
+    
+    if(true){
+        var a = 5;
+    };
+    console.log(a);
+
+    /*
+    if(true){
+        let b = 4;
+    };
+    console.log(b);
+    오류 나는 이유
+    let으로 선언된 변수를 선언된 if문 밖에서 console.log를 찍게 되면 if문 밖과 if문 안은 다른 세상이기때문에 값이 출력될 수 없음.
+    */
+</script>
+</html>
