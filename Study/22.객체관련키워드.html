@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 생성</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person(name){
+        this.name = name;
+        this.hello = function() {
+            console.log('나는' + this.name + '이야.');
+        }
+    }
+
+    var student = new Person('철수');
+    
+    var student2 = {
+        name : '영희',
+        hello : function() {
+            console.log('나는' + this.name + '입니다.');
+        }
+    }
+
+    student.hello();
+    student2.hello();
+
+    // instanceof 키워드
+    // 해당 객체가 어느 함수를 통해 생성됐는지 확인하는 키워드
+    console.log(student instanceof Person);
+    console.log(student2 instanceof Person);
+
+
+    // student3라는 변수에 값이 들어가지 않은 상태로 선언됨
+    var student3 = Person('기용');
+    console.log(student3);
+    // student3는 비어있는 값이기 때문에 student3.hello();는 오류가 뜸
+    student3.hello();
+
+</script>
+</html>
