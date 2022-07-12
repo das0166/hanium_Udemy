@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 상속</title>
+</head>
+<body>
+    
+</body>
+<script>
+ function Product(n, p, mb){  
+        // 초기화
+        let name = n;
+        let price = p;
+        let madeBy = mb;
+        
+        // 객체의 캡슐화
+        this.getName = function() {
+            return name;
+        }
+        this.getPrice = function() {
+            return price;
+        }
+        this.getMadeBy = function(){
+            return madeBy;
+        }
+        this.setName = function(n) {
+            name = n;
+        }
+        this.setPrice = function(p) {
+            price = p;
+        }
+        this.setMadeBy = function(mb) {
+            madeBy = mb;
+        }
+    }
+function Iphone(n,p,mb,v){
+    this.p = Product;
+    this.p(n,p,mb);
+
+    let version = v;
+
+    this.getVersion = function(){
+        return version;
+    }
+    this.setVersion = function(v){
+        versionn = v;
+    }
+}
+
+Iphone.prototype = Product.prototype;
+
+var iphone = new Iphone('아이폰 13', '120만원', 'apple', '프로');
+
+// 위에 작성되어 있는 Product를 iphone이 상속 받아서 getName을 사용할 수 있음
+console.log(`아이폰의 이름은? ${iphone.getName()}`);
+
+Product.prototype.getExplane = function() {
+        return `상품 이름은 ${this.getName()}이고 가격은 ${this.getPrice()} 입니다. ${this.getMadeBy()}에서 생산했습니다.`
+    }
+console.log(iphone.getExplane());
+
+console.log('Iphone을 통해서 생성됐나요? ' + (iphone instanceof Iphone));
+console.log('Product를 통해서 생성됐나요? ' + (iphone instanceof Product));
+</script>
+</html>
