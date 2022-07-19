@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 입출력</title>
+</head>
+<body>
+    <div id="area">
+
+    </div>
+</body>
+<script>
+    // DOM을 통해 HTML에 직접 출력
+    
+    document.write('document.write를 통해 출력하고 있습니다.');
+   
+    var div = document.getElementById('area');
+    div.innerHTML = 'innerHTML을 통해 값을 집어 넣었습니다.';
+
+    console.log('콘손을 통해 출력하고 있습니다.');
+
+    // 알림창 출력해주기
+    // window.alert();
+    // window.alert('alert을 사용하여 출력해주고 있습니다.');
+
+    // 확인과 취소 중 선택 가능한 알림창
+    // window.confirm();
+
+    // 알림창에서 선택한 결과값 콘솔에서 확인하기
+    /* var result = window.confirm('동물을 좋아합니까?');
+    console.log(result); */
+
+    // 알림창에 값 입력하기
+    // window.prompt();
+    var result = window.prompt('당신은 무슨 동물을 좋아하나요?');
+    /*  console.log(result); */
+    // 결과값을 받아서 재사용이 가능함
+    console.log(`당신은 동물 중 ${result}을 가장 좋아하는군요.`);
+
+
+</script>
+</html>
