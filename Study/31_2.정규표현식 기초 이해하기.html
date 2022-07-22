@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규표현식 기초 이해하기</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 메타문자를 이용한 자릿수 확인하기
+    // . -> 모든 문자(공백, 특수문자를 포함), 1글자를 뜻하는 표현 1자릿수
+
+    // 생년월일 6자리 성별 1자리를 포함한 7자리
+    var regExp = /^......-.......$/;
+
+    var num = '930224-2567834';
+
+    console.log(regExp.test(num));
+
+    if(regExp.test(num)){
+        console.log('자릿수는 맞습니다.');
+    } else{
+        console.log('자릿수마저 틀립니다.');
+    }
+
+    /*
+    추가적으로 사용되는 메타문자
+    \d : 숫자[0-9]와 동일한 의미
+    \w : 아무 단어(숫자 포함) 언더바(_)를 포함한 [A-Z,a-z,0-9,_]와 동일한 의미
+    \s : 공백 문자(탭, 띄어쓰기, 줄바꿈 등)을 포함한 하나의 공백문자
+    \D : 숫자가 아닌 문자 [^0-9]와 동일한 의미
+    \W : 아무 단어가 아닌 것 [^A-Z,a-z,0-9,_]와 동일한 의미
+    \S : 공백이 아닌 하나의 문자(공백 제외한 문자)
+    */
+   
+    var regExp2 = /^\d\d\d\d\d\d-\d\d\d\d\d\d\d$/;
+
+    if(regExp2.test(num)){
+        console.log('숫자 형식이라는 것과 자릿수는 맞습니다.');
+    } else{
+        console.log('숫자 형식이나 자릿수가 맞는지 확인해주세요');
+    }
+</script>
+</html>
